@@ -5,6 +5,8 @@
   "summary": "Manage tuned",
   "license": "Apache-2.0",
   "source": "https://github.com/jcpunk/puppet-tuned",
+  "project_page": "https://github.com/jcpunk/puppet-tuned",
+  "issues_url": "https://github.com/jcpunk/puppet-tuned/issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
