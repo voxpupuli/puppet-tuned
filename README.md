@@ -31,6 +31,8 @@ include tuned
 By default the tuned recommended profile is activated unless you select another one.
 This means two puppet runs are required in the default case: one to install tuned and one to populate the fact.
 
+If you set `active_profile` to a specific value, rather than the fact fallthrough, just one run is required.
+
 ## Usage
 
 The parameters you're most likly to need are:
