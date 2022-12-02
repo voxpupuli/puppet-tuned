@@ -1,1 +1,19 @@
---- {}
+---
+tuned::package_names:
+  - tuned
+
+tuned::packages_ensure: installed
+
+
+tuned::service_names:
+  - tuned.service
+
+tuned::services_ensure: running
+tuned::services_enable: true
+
+tuned::main_config_file: /etc/tuned/tuned-main.conf
+tuned::main_conf_ini_settings: {}
+
+tuned::enable_profile_now: true
+tuned::active_profile_source_file: /etc/tuned/active_profile
+tuned::active_profile: "%{facts.tuned_recommended_profile}"
