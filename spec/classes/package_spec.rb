@@ -15,7 +15,7 @@ describe 'tuned::package' do
       describe 'with args' do
         let(:params) do
           {
-            'package_names' => ['a', 'b'],
+            'package_names' => %w[a b],
             'packages_ensure' => 'latest',
           }
         end
