@@ -11,7 +11,7 @@ Manage the tuned daemon
     * [Beginning with tuned](#beginning-with-tuned)
 1. [Usage - Configuration options and additional functionality](#usage)
 1. [Limitations - OS compatibility, etc.](#limitations)
-1. [Development - Guide for contributing to the module](#development)
+1. [Transfer Notice - All your module are belong to us](#transfer-notice)
 
 ## Description
 
@@ -75,6 +75,8 @@ class { 'tuned':
 
 When run with the defaults, two runs are required to get the facts populated and utilized.
 
-## Development
+## Transfer Notice
 
-See: https://github.com/jcpunk/puppet-tuned
+This plugin was originally authored by @jcpunk. The maintainer preferred that Puppet Community take ownership of the module for future improvement and maintenance. Existing pull requests and issues were transferred over, please fork and continue to contribute here.
+
+Previously: https://github.com/jcpunk/puppet-tuned

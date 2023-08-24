@@ -1,12 +1,12 @@
 {
-  "name": "jcpunk-tuned",
+  "name": "puppet-tuned",
   "version": "0.1.1",
-  "author": "Pat Riehecky",
+  "author": "Vox Pupuli",
   "summary": "Manage tuned",
   "license": "Apache-2.0",
-  "source": "https://github.com/jcpunk/puppet-tuned",
-  "project_page": "https://github.com/jcpunk/puppet-tuned",
-  "issues_url": "https://github.com/jcpunk/puppet-tuned/issues",
+  "source": "https://github.com/voxpupuli/puppet-tuned",
+  "project_page": "https://github.com/voxpupuli/puppet-tuned",
+  "issues_url": "https://github.com/voxpupuli/puppet-tuned/issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
