@@ -1,6 +1,6 @@
 {
   "name": "puppet-tuned",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": "Vox Pupuli",
   "summary": "Manage tuned",
   "license": "Apache-2.0",
