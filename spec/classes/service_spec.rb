@@ -15,7 +15,7 @@ describe 'tuned::service' do
       describe 'with args' do
         let(:params) do
           {
-            'service_names' => ['a', 'b'],
+            'service_names' => %w[a b],
             'services_ensure' => 'stopped',
             'services_enable' => false,
           }

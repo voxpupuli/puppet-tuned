@@ -19,10 +19,10 @@ class tuned::active_profile (
 
   unless empty($active_profile) {
     if $enable_profile_now {
-      if $facts['tuned_active_profile'] != $active_profile {
+      if fact('tuned_active_profile') != $active_profile {
         exec { "set tuned-adm profile to ${active_profile}":
           command => "tuned-adm profile ${active_profile}",
-          path    => $facts['path'],
+          path    => fact('path'),
         }
       }
     }
