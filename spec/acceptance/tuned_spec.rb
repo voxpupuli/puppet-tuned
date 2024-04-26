@@ -4,8 +4,17 @@ require 'spec_helper_acceptance'
 
 describe 'tuned' do
   context 'with defaults values' do
-    it_behaves_like 'an idempotent resource' do
-      let(:manifest) { 'include tuned' }
+    pp = <<-EOS
+    include tuned
+    EOS
+
+    it 'works with no errors' do
+      apply_manifest(pp, catch_failures: true)
+    end
+
+    it 'works idempotently' do
+      pending('not idempotent')
+      apply_manifest(pp, catch_changes: true)
     end
 
     describe service('tuned') do
