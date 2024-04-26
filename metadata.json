@@ -49,6 +49,18 @@
       "operatingsystemrelease": [
         "7"
       ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "12"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "22.04"
+      ]
     }
   ],
   "requirements": [
