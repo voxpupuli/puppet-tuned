@@ -26,13 +26,13 @@ class tuned::active_profile (
         }
       }
     }
-  }
 
-  file { $active_profile_source_file:
-    ensure  => 'file',
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    content => "${active_profile}\n",
+    file { $active_profile_source_file:
+      ensure  => 'file',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+      content => "${active_profile}\n",
+    }
   }
 }
