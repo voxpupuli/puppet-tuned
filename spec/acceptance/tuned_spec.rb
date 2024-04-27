@@ -10,10 +10,12 @@ describe 'tuned' do
 
     it 'works with no errors' do
       apply_manifest(pp, catch_failures: true)
+      # apply twice so that the tuned_recommended_profile fact is present
+      apply_manifest(pp, catch_failures: true)
     end
 
     it 'works idempotently' do
-      pending('not idempotent')
+      # at least idempotently after two real runs
       apply_manifest(pp, catch_changes: true)
     end
 
