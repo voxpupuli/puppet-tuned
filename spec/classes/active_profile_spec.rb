@@ -13,14 +13,7 @@ describe 'tuned::active_profile' do
 
         it { is_expected.to compile }
 
-        it {
-          is_expected.to contain_file('/etc/tuned/active_profile').
-            with_ensure('file').
-            with_owner('root').
-            with_group('root').
-            with_mode('0644').
-            with_content("\n")
-        }
+        it { is_expected.not_to contain_file('/etc/tuned/active_profile') }
 
         it { is_expected.to have_exec_resource_count(0) }
       end
