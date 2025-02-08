@@ -1,9 +1,12 @@
 ---
+lookup_options:
+  tuned::package_names:
+    merge: unique
+
 tuned::package_names:
   - tuned
 
 tuned::packages_ensure: installed
-
 
 tuned::service_names:
   - tuned.service
