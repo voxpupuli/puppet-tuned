@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v1.1.0](https://github.com/voxpupuli/puppet-tuned/tree/v1.1.0) (2025-02-08)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-tuned/compare/v1.0.0...v1.1.0)
+
+**Breaking changes:**
+
+- drop support for EL7 [\#24](https://github.com/voxpupuli/puppet-tuned/pull/24) ([jhoblitt](https://github.com/jhoblitt))
+
+**Implemented enhancements:**
+
+- Add Rocky/OracleLinux/CentOS support [\#27](https://github.com/voxpupuli/puppet-tuned/pull/27) ([bastelfreak](https://github.com/bastelfreak))
+- Add Ubuntu 24.04 support [\#26](https://github.com/voxpupuli/puppet-tuned/pull/26) ([bastelfreak](https://github.com/bastelfreak))
+- enable packages list merge [\#25](https://github.com/voxpupuli/puppet-tuned/pull/25) ([vchepkov](https://github.com/vchepkov))
+- Add support for Debian 12 and Ubuntu 22.04 [\#17](https://github.com/voxpupuli/puppet-tuned/pull/17) ([evgeni](https://github.com/evgeni))
+
+**Fixed bugs:**
+
+- don't write active\_profile file when no profile is provided [\#19](https://github.com/voxpupuli/puppet-tuned/pull/19) ([evgeni](https://github.com/evgeni))
+
 ## [v1.0.0](https://github.com/voxpupuli/puppet-tuned/tree/v1.0.0) (2023-08-24)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-tuned/compare/0.1.1...v1.0.0)
