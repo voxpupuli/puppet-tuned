@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.0.0](https://github.com/voxpupuli/puppet-tuned/tree/v2.0.0) (2026-01-02)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-tuned/compare/v1.1.0...v2.0.0)
+
+**Breaking changes:**
+
+- Drop puppet, update openvox minimum version to 8.19 [\#34](https://github.com/voxpupuli/puppet-tuned/pull/34) ([TheMeier](https://github.com/TheMeier))
+
+**Implemented enhancements:**
+
+- metadata.json: Add OpenVox [\#30](https://github.com/voxpupuli/puppet-tuned/pull/30) ([jstraw](https://github.com/jstraw))
+
+**Fixed bugs:**
+
+- Run fact code only in setcode block [\#38](https://github.com/voxpupuli/puppet-tuned/pull/38) ([ekohl](https://github.com/ekohl))
+
 ## [v1.1.0](https://github.com/voxpupuli/puppet-tuned/tree/v1.1.0) (2025-02-08)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-tuned/compare/v1.0.0...v1.1.0)
