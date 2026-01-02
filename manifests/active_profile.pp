@@ -20,10 +20,12 @@ class tuned::active_profile (
   unless empty($active_profile) {
     if $enable_profile_now {
       if fact('tuned_active_profile') != $active_profile {
+        # lint:ignore:exec_idempotency
         exec { "set tuned-adm profile to ${active_profile}":
           command => "tuned-adm profile ${active_profile}",
           path    => fact('path'),
         }
+        # lint:endignore
       }
     }
 
