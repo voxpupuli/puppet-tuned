@@ -19,7 +19,7 @@ describe 'tuned' do
       describe 'with packages absent' do
         let(:params) do
           {
-            'packages_ensure' => 'absent'
+            'packages_ensure' => 'absent',
           }
         end
 
