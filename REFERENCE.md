@@ -44,11 +44,15 @@ Data type: `Array[String[1]]`
 
 What packages are part of tuned
 
+Default value: `['tuned']`
+
 ##### <a name="-tuned--packages_ensure"></a>`packages_ensure`
 
 Data type: `String[1]`
 
 Expected state of tuned packages
+
+Default value: `'installed'`
 
 ##### <a name="-tuned--main_config_file"></a>`main_config_file`
 
@@ -56,11 +60,15 @@ Data type: `Stdlib::Absolutepath`
 
 Path to your `/etc/tuned/tuned-main.conf`
 
+Default value: `'/etc/tuned/tuned-main.conf'`
+
 ##### <a name="-tuned--main_conf_ini_settings"></a>`main_conf_ini_settings`
 
 Data type: `Hash`
 
 Settings to put in `$main_config_file`
+
+Default value: `{}`
 
 ##### <a name="-tuned--service_names"></a>`service_names`
 
@@ -68,11 +76,15 @@ Data type: `Array[String[1]]`
 
 What services are part of tuned
 
+Default value: `['tuned.service']`
+
 ##### <a name="-tuned--services_ensure"></a>`services_ensure`
 
 Data type: `Stdlib::Ensure::Service`
 
 Expected state of tuned services
+
+Default value: `'running'`
 
 ##### <a name="-tuned--services_enable"></a>`services_enable`
 
@@ -80,11 +92,15 @@ Data type: `Boolean`
 
 Expected state of tuned services
 
+Default value: `true`
+
 ##### <a name="-tuned--enable_profile_now"></a>`enable_profile_now`
 
 Data type: `Boolean`
 
 Run `tuned-adm profile` if the profile is out of sync with `$active_profile`
+
+Default value: `true`
 
 ##### <a name="-tuned--active_profile_source_file"></a>`active_profile_source_file`
 
@@ -92,9 +108,13 @@ Data type: `Stdlib::Absolutepath`
 
 Where to store default profile on daemon start (probably `/etc/tuned/active_profile`)
 
+Default value: `'/etc/tuned/active_profile'`
+
 ##### <a name="-tuned--active_profile"></a>`active_profile`
 
 Data type: `Optional[String]`
 
 What profile should be used by this system
+
+Default value: `'%{facts.tuned_recommended_profile}'`
 
