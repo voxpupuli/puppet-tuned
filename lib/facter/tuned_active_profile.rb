@@ -8,7 +8,7 @@ Facter.add(:tuned_active_profile) do
     retval = nil
 
     if Facter::Util::Resolution.which('tuned-adm')
-      cmd = Facter::Core::Execution.exec('tuned-adm active 2>/dev/null')
+      cmd = Facter::Core::Execution.execute('tuned-adm active', on_fail: nil, stderr: '/dev/null')
       retval = Regexp.last_match(1) if cmd && cmd =~ %r{^Current active profile: (.*)$}
     end
 
