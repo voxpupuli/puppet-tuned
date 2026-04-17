@@ -8,7 +8,7 @@ Facter.add(:tuned_recommended_profile) do
     retval = nil
 
     if Facter::Util::Resolution.which('tuned-adm')
-      retval = Facter::Core::Execution.exec('tuned-adm recommend 2>/dev/null')
+      retval = Facter::Core::Execution.execute('tuned-adm recommend', on_fail: nil, stderr: '/dev/null')
       retval = nil if retval == ''
     end
 
