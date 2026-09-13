@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Facter.add(:tuned_active_profile) do
-  # https://puppet.com/docs/puppet/latest/fact_overview.html
+  # https://docs.openvoxproject.org/openfact/latest/
   confine kernel: 'Linux'
 
   setcode do
     retval = nil
 
-    if Facter::Util::Resolution.which('tuned-adm')
+    if Facter::Core::Execution.which('tuned-adm')
       cmd = Facter::Core::Execution.execute('tuned-adm active', on_fail: nil, stderr: '/dev/null')
       retval = Regexp.last_match(1) if cmd && cmd =~ %r{^Current active profile: (.*)$}
     end
