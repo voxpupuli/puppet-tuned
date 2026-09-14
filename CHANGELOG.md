@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.1.0](https://github.com/voxpupuli/puppet-tuned/tree/v2.1.0) (2026-09-14)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-tuned/compare/v2.0.0...v2.1.0)
+
+**Implemented enhancements:**
+
+- replace deprecated calls with Facter::Core::Execution [\#45](https://github.com/voxpupuli/puppet-tuned/pull/45) ([corporate-gadfly](https://github.com/corporate-gadfly))
+- Drop Facter::Core::Execution.exec for Facter::Core::Execution.execute [\#43](https://github.com/voxpupuli/puppet-tuned/pull/43) ([jcpunk](https://github.com/jcpunk))
+
 ## [v2.0.0](https://github.com/voxpupuli/puppet-tuned/tree/v2.0.0) (2026-01-02)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-tuned/compare/v1.1.0...v2.0.0)
