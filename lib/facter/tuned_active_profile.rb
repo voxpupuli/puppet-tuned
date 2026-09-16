@@ -10,7 +10,7 @@ Facter.add(:tuned_active_profile) do
     retval = nil
 
     if Facter::Core::Execution.which('tuned-adm')
-      cmd = Facter::Core::Execution.execute('tuned-adm active', on_fail: nil, logger: Logger.new(File::NULL))
+      cmd = Facter::Core::Execution.execute('tuned-adm active', logger: Logger.new(File::NULL))
       retval = Regexp.last_match(1) if cmd && cmd =~ %r{^Current active profile: (.*)$}
     end
 

@@ -29,7 +29,7 @@ describe ':tuned_active_profile', type: :fact do
     it do
       allow(Facter::Core::Execution).to receive(:which).with('tuned-adm').and_return('tuned-adm')
       allow(Facter::Core::Execution).to receive(:execute).and_call_original
-      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm active', hash_including(on_fail: nil, logger: instance_of(Logger))).and_return(not_running_output)
+      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm active', hash_including(logger: instance_of(Logger))).and_return(not_running_output)
 
       expect(fact.value).to be_nil
     end
@@ -39,7 +39,7 @@ describe ':tuned_active_profile', type: :fact do
     it do
       allow(Facter::Core::Execution).to receive(:which).with('tuned-adm').and_return('tuned-adm')
       allow(Facter::Core::Execution).to receive(:execute).and_call_original
-      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm active', hash_including(on_fail: nil, logger: instance_of(Logger))).and_return(active_profile_output)
+      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm active', hash_including(logger: instance_of(Logger))).and_return(active_profile_output)
 
       expect(fact.value).to eq('balanced')
     end
