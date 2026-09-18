@@ -28,7 +28,7 @@ describe ':tuned_recommended_profile', type: :fact do
     it do
       allow(Facter::Core::Execution).to receive(:which).with('tuned-adm').and_return('tuned-adm')
       allow(Facter::Core::Execution).to receive(:execute).and_call_original
-      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm recommend', hash_including(on_fail: nil, stderr: '/dev/null')).and_return('')
+      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm recommend').and_return('')
 
       expect(fact.value).to be_nil
     end
@@ -38,7 +38,7 @@ describe ':tuned_recommended_profile', type: :fact do
     it do
       allow(Facter::Core::Execution).to receive(:which).with('tuned-adm').and_return('tuned-adm')
       allow(Facter::Core::Execution).to receive(:execute).and_call_original
-      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm recommend', hash_including(on_fail: nil, stderr: '/dev/null')).and_return(recommend_output)
+      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm recommend').and_return(recommend_output)
 
       expect(fact.value).to eq('virtual-guest')
     end
