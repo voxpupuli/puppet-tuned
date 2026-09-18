@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.1.1](https://github.com/voxpupuli/puppet-tuned/tree/v2.1.1) (2026-09-18)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-tuned/compare/v2.1.0...v2.1.1)
+
+**Fixed bugs:**
+
+- \[facter\] Fixup "Unexpected key passed" warning [\#48](https://github.com/voxpupuli/puppet-tuned/pull/48) ([toggetit](https://github.com/toggetit))
+
 ## [v2.1.0](https://github.com/voxpupuli/puppet-tuned/tree/v2.1.0) (2026-09-14)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-tuned/compare/v2.0.0...v2.1.0)
