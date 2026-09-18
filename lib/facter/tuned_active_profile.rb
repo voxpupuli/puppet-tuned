@@ -1,19 +1,11 @@
 # frozen_string_literal: true
 
-require 'logger'
-
 Facter.add(:tuned_active_profile) do
   # https://docs.openvoxproject.org/openfact/latest/
-  confine kernel: 'Linux'
+  confine { Facter::Core::Execution.which('tuned-adm') }
 
   setcode do
-    retval = nil
-
-    if Facter::Core::Execution.which('tuned-adm')
-      cmd = Facter::Core::Execution.execute('tuned-adm active', logger: Logger.new(File::NULL))
-      retval = Regexp.last_match(1) if cmd && cmd =~ %r{^Current active profile: (.*)$}
-    end
-
-    retval
+    cmd = Facter::Core::Execution.execute('tuned-adm active')
+    %r{^Current active profile: (.*)$}.match(cmd)[1]
   end
 end

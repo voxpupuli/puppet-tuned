@@ -1,19 +1,11 @@
 # frozen_string_literal: true
 
-require 'logger'
-
 Facter.add(:tuned_recommended_profile) do
   # https://docs.openvoxproject.org/openfact/latest/
-  confine kernel: 'Linux'
+  confine { Facter::Core::Execution.which('tuned-adm') }
 
   setcode do
-    retval = nil
-
-    if Facter::Core::Execution.which('tuned-adm')
-      retval = Facter::Core::Execution.execute('tuned-adm recommend', logger: Logger.new(File::NULL))
-      retval = nil if retval == ''
-    end
-
-    retval
+    cmd = Facter::Core::Execution.execute('tuned-adm recommend')
+    cmd.empty? ? nil : cmd
   end
 end
