@@ -6,6 +6,6 @@ Facter.add(:tuned_active_profile) do
 
   setcode do
     cmd = Facter::Core::Execution.execute('tuned-adm active')
-    %r{^Current active profile: (.*)$}.match(cmd)[1]
+    %r{^Current active profile: (.*)$}.match(cmd)&.[](1)
   end
 end
