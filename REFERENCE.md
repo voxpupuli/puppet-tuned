@@ -117,4 +117,3 @@ Data type: `Optional[String]`
 What profile should be used by this system
 
 Default value: `'%{facts.tuned_recommended_profile}'`
-

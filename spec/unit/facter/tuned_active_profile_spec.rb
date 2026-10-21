@@ -44,4 +44,14 @@ describe ':tuned_active_profile', type: :fact do
       expect(fact.value).to eq('balanced')
     end
   end
+
+  context 'Regexp not matching' do
+    it do
+      allow(Facter::Core::Execution).to receive(:which).with('tuned-adm').and_return('tuned-adm')
+      allow(Facter::Core::Execution).to receive(:execute).and_call_original
+      allow(Facter::Core::Execution).to receive(:execute).with('tuned-adm active').and_return('Dummy-Output')
+
+      expect(fact.value).to be_nil
+    end
+  end
 end
